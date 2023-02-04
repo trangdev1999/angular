@@ -1,0 +1,44 @@
+.list_products{
+border:1px solid #969595
+}
+.show_product{
+    margin: 15px 50px;
+    border:1px solid #969595
+}
+.product_name{
+   background-color:#e1ecec;
+   border-bottom: #969595;
+   height: 35px;
+}
+.product_name h5{
+    margin:0px 15px
+}
+.fitter{
+    margin-left:70px;
+    margin-top: 20px;
+}
+.fitter_button{
+    display:flex;
+
+}
+.fitter_text{
+    margin-left:50px;
+    height: 30px;
+    width: 250px
+}
+.table{
+    margin-top:20px
+}
+.crop {
+ overflow: hidden;
+}
+
+.show{
+    margin: 10px 70px
+}
+.show input{
+    margin: 15px
+}
+.checked {
+  color: orange;
+}

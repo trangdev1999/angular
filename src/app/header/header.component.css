@@ -1,0 +1,7 @@
+.header{
+    box-sizing: content-box;
+}
+.text-content{
+    display: flex;
+    justify-content: space-between;
+}

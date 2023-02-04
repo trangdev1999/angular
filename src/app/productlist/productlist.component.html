@@ -1,0 +1,56 @@
+<div class="list_products">
+    <div class="show_product">
+      <div>
+        <h6>{{title}}</h6>
+      </div>
+        <div class="product_name">
+
+            <h5>Product List</h5>
+
+        </div>
+        <div class="fitter">
+            <div class="row mb-2">
+                <label class="col-2">Filter:</label>
+                <!-- <input type="text" class="col-3" [(ngModel)]='filterValue' (input)='filter()'> -->
+                <input type="text" class="col-3" [(ngModel)]='sentence' (input)='filter()'>
+            </div>
+            <div class="col-7">
+                <h4>Filter By : {{this.filterValue}}</h4>
+            </div>
+        </div>
+        <div class="show">
+           Show Image <input type="checkbox" [(ngModel)]='showImage'>
+        </div>
+        <div class="table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <td style="width: 40px;height: 10px" *ngIf="showImage">Image</td>
+                        <td>Product</td>
+                        <td>Code</td>
+                        <td>Available</td>
+                        <td>Price</td>
+                        <td>5 Star Rating </td>
+                    </tr>
+                </thead>
+                <tbody id="show_product" *ngFor="let text of products">
+                    <tr>
+                        <td *ngIf="showImage">
+                                <img [src]="text.imageUrl" width="100px" style="text-align: center;">
+
+                        </td>
+                        <td>{{text.productName |uppercase}}</td>
+                        <td>{{text.productCode}}</td>
+                        <td>{{text.releaseDate}}</td>
+                        <td>{{text.price|currency }}</td>
+                        <td>
+                           <app-star [rating]="text.starRating" (ratingClicked)= 'onRatingClicked($event)' ></app-star>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
